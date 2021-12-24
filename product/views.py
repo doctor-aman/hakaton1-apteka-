@@ -13,7 +13,7 @@ class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = [SearchFilter, OrderingFilter, DjangoFilterBackend]
-    filterset_class = ProductFilter
+    # filterset_class = ProductFilter
     search_fields = ['name']  # поиск по имени
     ordering_fields = ['name', 'price']
 

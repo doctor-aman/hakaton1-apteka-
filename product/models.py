@@ -13,6 +13,8 @@ class Category(models.Model):  # Категории продукта
     def __str__(self):
         return self.name
 
+    objects = models.Manager()
+
 
 class Brand(models.Model):  # Фирмы производители
     name = models.CharField(max_length=50, unique=True)
@@ -55,6 +57,8 @@ class Product(models.Model):  # Товары
 
     def __str__(self):
         return self.name
+
+    objects = models.Manager()
 
 
 class Comment(models.Model):
