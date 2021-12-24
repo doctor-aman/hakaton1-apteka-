@@ -56,6 +56,8 @@ class Product(models.Model):  # Товары
     def __str__(self):
         return self.name
 
+    objects = models.Manager()
+
 
 class Comment(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comment')
